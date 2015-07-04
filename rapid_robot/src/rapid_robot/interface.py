@@ -62,7 +62,7 @@ class Interface(object):
             # If a timeout is set, then possibly break out of the loop.
             wait_duration = (rospy.Time().now() - start_time).to_sec()
             if timeout is not None:
-                timeout_remaining -= wait_duration
+                timeout_remaining = timeout - wait_duration
                 if timeout_remaining <= 0:
                     break
 
