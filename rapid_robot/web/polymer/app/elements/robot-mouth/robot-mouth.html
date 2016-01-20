@@ -10,27 +10,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="robot-eye">
+<dom-module id="robot-mouth">
   <template>
     <style>
       :host {
         display: block;
-        height: 100px;
-        width: 100px;
-        overflow: hidden;
+        width: 50px;
+        height: 20px;
       }
-      #eyelid {
+      #mouth {
         position: absolute;
-        background-color: #512Da8;
-        width: 100px;
-        height: 0px;
+        bottom: 0;
       }
     </style>
-    <div id="eye">
-      <div id="eyelid"></div>
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="50" fill="#fff" />
-        <circle cx="50" cy="45" r="35" fill="#000" />
+    <div id="mouth">
+      <svg width="50px" height="20px">
+        <path d="M0 10 C 10 15, 40 15, 50 10" stroke="white" stroke-width="3" fill="transparent"/>
       </svg>
     </div>
   </template>
@@ -39,13 +34,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     'use strict';
 
     Polymer({
-      is: 'robot-eye',
+      is: 'robot-mouth',
 
-      blink: function() {
-        var eyelid = this.$.eyelid;
-        eyelid.animate([{'height': '0px'}, {'height': '110px'}], 100, 'swing', function() {
-          eyelid.animate([{'height': '100px'}, {'height': '0px'}], 100);
-        });
+      properties: {
       }
     });
   })();
