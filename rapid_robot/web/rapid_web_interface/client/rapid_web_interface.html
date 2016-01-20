@@ -1,20 +1,19 @@
 <head>
   <title>Turtlebot web interface</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Turtlebot">
+  <link rel="icon" sizes="100x100" href="img/hcrlab-100x100.png">
+  <script src="polymer/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="polymer/elements/elements.vulcanized.html">
 </head>
 
 <body>
-  <div class="container">
-    {{> Template.dynamic template=interface_type data=interface_params}}
-  </div>
+  {{> Template.dynamic template=interface_type data=interface_params}}
 </body>
 
 <template name="default">
-<div class="default_container">
-  <div class="jumbotron">
-    <h1>Turtlebot</h1>
-  </div>
-</div>
+  <robot-face></robot-face>
 </template>
 
 <template name="display_message">
