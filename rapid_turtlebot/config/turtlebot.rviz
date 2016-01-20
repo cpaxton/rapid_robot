@@ -30,7 +30,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: Bumper Hit
+    SyncSource: LaserScan
 Visualization Manager:
   Class: ""
   Displays:
@@ -358,7 +358,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /v4l/camera/image_raw
+      Image Topic: /camera/rgb/image_color
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -399,10 +399,10 @@ Visualization Manager:
         Z: 1.43326
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 1.2004
+      Pitch: 1.0004
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.778558
+      Yaw: 1.53356
     Saved: ~
 Window Geometry:
   Displays:
@@ -422,5 +422,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1871
-  X: 41
-  Y: -4
+  X: 42
+  Y: 24
