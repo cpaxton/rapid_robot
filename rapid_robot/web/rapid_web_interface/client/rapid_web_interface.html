@@ -9,15 +9,15 @@
 </head>
 
 <body>
-  {{> Template.dynamic template=interface_type data=interface_params}}
+  {{> Template.dynamic template=displayType data=displayParams}}
 </body>
 
-<template name="default">
+<template name="displayMessage">
   <robot-face>
     <robot-message>
       <div class="centered">
-        <div class="disp4">Hello world!</div>
-        <div class="disp3">Oh the places I'll go!</div>
+        <div class="disp4">{{h1text}}</div>
+        <div class="disp3">{{h2text}}</div>
       </div>
     </robot-message>
   </robot-face>
