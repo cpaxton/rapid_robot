@@ -9,37 +9,5 @@
 </head>
 
 <body>
-  {{> Template.dynamic template=displayType data=displayParams}}
+  <robot-face display-type="{{displayType}}" h1-text="{{displayParams.h1text}}" h2-text="{{displayParams.h2text}}"></robot-face>
 </body>
-
-<template name="displayMessage">
-  <robot-face>
-    <robot-message>
-      <div class="centered">
-        <div class="disp4">{{h1text}}</div>
-        <div class="disp3">{{h2text}}</div>
-      </div>
-    </robot-message>
-  </robot-face>
-</template>
-
-<template name="display_message">
-<div class="display_message_container">
-  <div class="jumbotron">
-    <p class="message">{{message}}</p>
-  </div>
-</div>
-</template>
-
-<template name="ask_choice">
-<div class="ask_choice_container">
-  <div class="jumbotron">
-    <p class="message">{{message}}</p>
-    <form class="select-choice">
-      {{#each choices}}
-      <button class="btn btn-default btn-lg btn-block" value="{{.}}">{{.}}</button>
-      {{/each}}
-    </form>
-  </div>
-</div>
-</template>

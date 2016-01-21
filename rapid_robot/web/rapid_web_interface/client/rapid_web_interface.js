@@ -7,6 +7,10 @@ if (Meteor.isClient) {
     displayParams: function() {
       var params = Display.findOne('displayParams');
       return params ? params : {h1text: 'Hello world!'};
+    },
+    equal: function(displayType, name) {
+      console.log(displayType + name);
+      return displayType === name;
     }
   });
 
